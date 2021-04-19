@@ -1,0 +1,82 @@
+@font-face
+    {
+        font-family: 'avenir';
+        src: url(fonts/AvenirNextLTPro-Regular.otf);
+        font-style: normal;
+        font-weight: 100;
+    }
+
+@font-face
+    {
+        font-family: 'futura';
+        src: url(fonts/FUTURAM.TTF);
+        font-style: normal;
+        font-weight: 100;
+    }
+
+@font-face
+    {
+        font-family: 'albra';
+        src: url(fonts/AlbraTextBold.otf);
+        font-style: normal;
+        font-weight: 100;
+    }
+
+body{
+    background-color:#EEEEEF;
+    font-family: 'albra';
+    margin: auto;
+    padding: auto;
+}
+
+.navi{
+    font-family: 'futura'
+}
+
+h1{
+    font-size: 3.5em;
+    line-height: 90%;
+}
+
+.mainButton{
+
+    border: none;
+	background-color:#ff7700;
+	border-radius:41px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:'futura';
+	font-size:15px;
+	padding:12px 100px;
+	text-decoration:none;
+    outline: none;
+
+    box-shadow:  6px 6px 8px #D1CDC7,
+             -6px -6px 8px #FFFFFF;
+   
+}
+
+.mainButton:hover{
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+.mainButton:active{
+    border: none;
+    outline: none;
+    box-shadow: inset 12px 12px 8px #d96500,
+                inset -12px -12px 8px #ff8900;
+    
+}
+
+
+.container.slogan {
+    padding: 0;
+    margin: 2%;
+    margin-top: 15%;
+    
+  }
+
+

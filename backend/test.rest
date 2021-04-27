@@ -1,0 +1,8 @@
+POST http://ec2-3-19-211-127.us-east-2.compute.amazonaws.com:8080/sign_up
+Content-Type: application/json
+
+{
+    "name":"John Smith",
+    "email":"john@gmail.com",
+    "password":"hi"
+}

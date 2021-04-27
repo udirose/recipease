@@ -9,35 +9,35 @@ class animations extends React.Component {
           position: "absolute",
           zIndex: 1,
           left: 0,
-          top: 0
+          top: -10
         }}
       >
         <img
           className="waffle"
           src="images/waffle.png"
-          width={600}
-          length={600}
+          width={400}
+          length={400}
         />
-        <img className="mac" src="images/foods.png" width={600} length={600} />
+        <img className="mac" src="images/foods.png" width={400} length={400} />
         <img
           className="salad"
           src="images/salad.png"
-          width={600}
-          length={600}
+          width={400}
+          length={400}
         />
         <img
           className="sandwich"
           src="images/sandwich.png"
-          width={600}
-          length={600}
+          width={400}
+          length={400}
         />
         <img
           className="waffle2"
           src="images/waffle.png"
-          width={600}
-          length={600}
+          width={400}
+          length={400}
         />
-        <img className="mac2" src="images/foods.png" width={600} length={600} />
+        <img className="mac2" src="images/foods.png" width={400} length={400} />
       </div>
     );
   }

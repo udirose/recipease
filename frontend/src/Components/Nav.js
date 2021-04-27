@@ -4,7 +4,7 @@ class Nav extends React.Component {
   render() {
     return (
       <nav className="navbar navbar-expand-md fixed-top">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <img
             className="logo"
             src="images/RecipeaseLogo.png"
@@ -29,27 +29,27 @@ class Nav extends React.Component {
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav mr-auto nav">
             <li className="nav-item">
-              <a className="nav-link home" href="home.html">
+              <a className="nav-link home" href="/">
                 HOME
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link recipe-center" href="#">
+              <a className="nav-link recipe-center" href="/recipe_center">
                 RECIPE CENTER
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link saved-recipes" href="#">
-                SAVED RECIPES
+                YOUR RECIPES
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link login" href="login.html">
+              <a className="nav-link login" href="/login">
                 LOGIN
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link register" href="register.html">
+              <a className="nav-link register" href="/register">
                 REGISTER
               </a>
             </li>

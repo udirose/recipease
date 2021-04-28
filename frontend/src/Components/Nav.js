@@ -39,7 +39,7 @@ class Nav extends React.Component {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link saved-recipes" href="#">
+              <a className="nav-link saved-recipes" href="/your_recipes">
                 YOUR RECIPES
               </a>
             </li>

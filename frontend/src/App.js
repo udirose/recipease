@@ -10,6 +10,7 @@ import Animations from './Components/Animations'
 import Register from './Components/Register'
 import Login from './Components/Login'
 import RecipeCenter from './Components/RecipeCenter'
+import UploadRecipe from './Components/UploadRecipe'
 
 
 const api = axios.create({
@@ -51,6 +52,11 @@ function App() {
       <Route path="/recipe_center">
         <Nav />
         <RecipeCenter/>
+      </Route>
+
+      <Route path="/your_recipes">
+        <Nav />
+        <UploadRecipe/>
       </Route>
 
     </Router>

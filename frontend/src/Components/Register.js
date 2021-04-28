@@ -60,7 +60,7 @@ const isRegistered = false
             />
             <br />
             <br />
-            <Link to={"/login"}><input
+            <Link to="/login"><input
              type="submit" 
              id="registerButton" 
              defaultValue="Register" 

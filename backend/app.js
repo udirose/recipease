@@ -20,6 +20,7 @@ mongoose.connect(process.env.DATABASE_ACCESS, () => console.log("Connected to Da
 app.use("/", require('./routes/signupUser'))
 app.use("/", require('./routes/loginUser'))
 app.use("/", require('./routes/dishes'))
+app.use("/", require('./routes/uploadRecipes'))
 
 
 app.listen(8080, function () {

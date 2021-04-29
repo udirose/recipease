@@ -40,7 +40,7 @@ function App() {
       </Route>
 
       <Route path="/register">
-        <Nav />
+        <Nav/>
         <Register />
       </Route>
 

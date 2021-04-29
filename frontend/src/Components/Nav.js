@@ -54,12 +54,6 @@ class Nav extends React.Component {
               </a>
             </li>
           </ul>
-          <img
-            className="icon"
-            src="images/profileicon.png"
-            width={36}
-            length={36}
-          />
         </div>
       </nav>
     );

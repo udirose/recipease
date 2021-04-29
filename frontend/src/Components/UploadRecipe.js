@@ -27,18 +27,62 @@ function UploadRecipe() {
     }
 
     return (
-        <div className = "container fluid">
-        <br/>
-        <br/>
-        <br/>
-        <h2>Upload your own Recipe!</h2>
-            <form id = "submitRecipe">
-                <input type = "text" id = "recipName" placeholder = "enter recipe name"/><br/><br/>
-                <input type = "text" id = "recipIngred" placeholder = "enter recipe ingredients"/><br/><br/>
-                <input type = "text" id = "recipDesc" placeholder = "enter recipe description"/><br/><br/>
-                <Link to = "/recipe_center"><input type = "submit" id = "uploadRecipe" onClick = {handleClick} value = "Upload"/></Link>
-            </form>
-        </div>
+        // <div className = "container fluid">
+        // <br/>
+        // <br/>
+        // <br/>
+        // <h2>Upload your own Recipe!</h2>
+        //     <form id = "submitRecipe">
+        //         <input type = "text" id = "recipName" placeholder = "enter recipe name"/><br/><br/>
+        //         <input type = "text" id = "recipIngred" placeholder = "enter recipe ingredients"/><br/><br/>
+        //         <input type = "text" id = "recipDesc" placeholder = "enter recipe description"/><br/><br/>
+        //         <Link to = "/recipe_center"><input type = "submit" id = "uploadRecipe" onClick = {handleClick} value = "Upload"/></Link>
+        //     </form>
+        // </div>
+        <div className="container-fluid">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div
+      className="card card-text mx-auto"
+      style={{
+        width: "45%"
+      }}
+    >
+  <h1 className="login-page-text">Upload your Own Recipe!</h1>
+      <div className="form-group text-center">
+        <br />
+        <form id="submitRecipe">
+          <input
+            className="mx-auto"
+            type="text"
+            required
+            id="recipName"
+            placeholder="enter recipe name"
+          />
+          <br />
+          <br />
+          <input
+            type="text"
+            required
+            id="recipIngred"
+            placeholder="enter ingredients"
+          />
+          <br />
+          <input
+            type="text"
+            required
+            id="recipDesc"
+            placeholder="enter description"
+          />
+          <br />
+          <br />
+          <button type = "submit" id = "uploadRecipe" defaultValue= "UPLOAD" onClick={handleClick}>UPLOAD</button>
+        </form>
+      </div>
+    </div>
+  </div>
     )
 
 

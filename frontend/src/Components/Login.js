@@ -19,33 +19,52 @@ function Login() {
 
   return (
     <div className="container-fluid">
-      <br />
-      <br />
-      <br />
-      <h1 className="text-center">Login!</h1>
+    <br/>
+    <br/>
+    <br/>
+    <div
+      className="card card-text mx-auto"
+      style={{
+        width: "45%"
+      }}
+    >
+      <a className="login-logo" href="home.html">
+        <img alt src="images/RecipeaseLogo.png" width={189} height={27} />
+      </a>
+      <h1 className="login-page-text">welcome to recipease!</h1>
+      <h1 className="login-page-text">to enter, please login.</h1>
       <div className="form-group text-center">
         <br />
         <form id="login" action="/" method="POST">
           <input
+            className="mx-auto"
             type="text"
             required
             id="lEmail"
-            placeholder="Enter Email"
+            placeholder="enter email"
           />
           <br />
           <br />
           <input
             type="password"
-            id="lPassword"
             required
-            placeholder="******"
+            id="lPassword"
+            placeholder="enter password"
           />
           <br />
           <br />
-          <input type="submit" id="loginButton" defaultValue="Login" onClick={handleClick} />
+          <button type = "submit" id = "loginButton" defaultValue= "LOGIN" onClick={handleClick}>SUBMIT</button>
         </form>
       </div>
+      <div className="no-account container">
+        <h2>no account?</h2>{" "}
+        <a className="create" href="#">
+          create one!
+        </a>
+      </div>
     </div>
+  </div>
+
   );
 }
 

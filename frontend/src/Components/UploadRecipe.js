@@ -21,9 +21,7 @@ function UploadRecipe() {
       .then(
         (response) => {
           console.log(response);
-          history.push({
-            pathname: "/",
-          })
+          history.push('/recipe_center')
           console.log("succesfully submited");
         },
         (error) => {
@@ -31,6 +29,7 @@ function UploadRecipe() {
         }
       );
 
+      history.push('/recipe_center')
     //end axios
   }
 

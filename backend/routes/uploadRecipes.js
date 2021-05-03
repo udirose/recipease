@@ -23,6 +23,7 @@ const submitRecip = require('../models/recipesmodel')
     })
 
     newRec.save()
+    res.redirect('/recipe_center')
   })
 
   module.exports = router

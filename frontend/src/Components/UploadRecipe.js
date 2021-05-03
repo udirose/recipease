@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+
 
 function UploadRecipe() {
+  const history = useHistory()
   function handleClick(event) {
     event.preventDefault();
     var iName = document.getElementById("recipName").value;
@@ -19,6 +21,9 @@ function UploadRecipe() {
       .then(
         (response) => {
           console.log(response);
+          history.push({
+            pathname: "/",
+          })
           console.log("succesfully submited");
         },
         (error) => {

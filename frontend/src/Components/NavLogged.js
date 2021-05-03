@@ -5,7 +5,7 @@ class NavLogged extends React.Component {
   render() {
     return (
       <nav className="navbar navbar-expand-md fixed-top">
-        <Link to = "/" className = "navbar-brand">
+        <Link to="/" className="navbar-brand">
           <img
             className="logo"
             src="images/RecipeaseLogo.png"
@@ -30,31 +30,24 @@ class NavLogged extends React.Component {
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav mr-auto nav">
             <li className="nav-item">
-          
-              <Link to = "/" className = "nav-link home">
+              <Link to="/" className="nav-link home">
                 HOME
-                </Link>
-              
+              </Link>
             </li>
             <li className="nav-item">
-   
-              <Link to = "/recipe_center" className = "nav-link recipe-center">
+              <Link to="/recipe_center" className="nav-link recipe-center">
                 RECIPE CENTER
-                </Link>
-              
+              </Link>
             </li>
             <li className="nav-item">
-            <Link to = "/your_recipes" className = "nav-link saved-recipes">
-                YOUR RECIPES
-             </Link>
+              <Link to="/your_recipes" className="nav-link saved-recipes">
+                UPLOAD RECIPE
+              </Link>
             </li>
             <li className="nav-item">
-            <a href = "/" className = "nav-link login">
-              
+              <a href="/" className="nav-link login">
                 LOGOUT
-                
-                </a>
-              
+              </a>
             </li>
           </ul>
         </div>

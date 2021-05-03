@@ -1,21 +1,17 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
 function Login(props) {
-
-var access
   const history = useHistory();
-  
 
   function handleClick(event) {
     event.preventDefault();
-    const reload = props.logMethod
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
 
-
-    axios.post(
+    axios
+      .post(
         "http://ec2-3-19-211-127.us-east-2.compute.amazonaws.com:8080/login",
         {
           usernameField: email,
@@ -23,27 +19,15 @@ var access
         }
       )
       .then((response) => {
-        //console.log(response.data);
         if (response) {
-          //console.log(response.data)
-          //props.loginSet((prevState) => ({ ...prevState, isLoggedIn: true }))
-          access = true
-          //props.loginSet(true)
-          props.loginMeth(true)
-          //props.loginCheck(true)
-          //history.push("/")
+          props.loginMeth(true);
           history.push({
-            pathname: "/"
+            pathname: "/",
           });
-        } else {
-          //props.loginSet(false)
         }
       })
       .catch(() => {
-        //props.loginSet(false)
-        //props.loginCheck(false)
         console.log("error");
-        //loginCheck(false)
       });
   }
 

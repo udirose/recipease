@@ -15,9 +15,9 @@ import NavLogged from "./Components/NavLogged";
 import View from "./Components/View";
 import App from "./App"
 
+//this is in order to keep the state from not reseting
 function State() {
     const [log,setLog] = useState()
-    console.log("hi")
     return(
         <App log = {log} setLog = {setLog}/>
     )

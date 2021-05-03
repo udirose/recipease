@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Buy from "./Buy"
 
 class RecipeCenter extends React.Component {
   constructor(props) {
     super(props);
     this.state = { recipeCollection: [] };
   }
-
-  // const [recipeCollection,setRecipeCollection] = useState([])
-  // const [searchValue, setSearchValue] = useState("")
 
   handleSearch = (event) => {
     event.preventDefault();
@@ -22,12 +20,7 @@ class RecipeCenter extends React.Component {
         }
       )
       .then((response) => {
-        //console.log(searchValue)
-        //setRecipeCollection(response.data)
         this.setState({ recipeCollection: response.data });
-        //setSearchValue("")
-
-        //console.log(searchValue)
         document.getElementById("search").value = "";
       })
       .catch(() => {
@@ -65,19 +58,17 @@ class RecipeCenter extends React.Component {
   };
 
   recipeResults = () => {
-    //console.log(recipeCollection)
     if (
       this.state.recipeCollection != null &&
       this.state.recipeCollection.length != 0
     ) {
       return this.state.recipeCollection.map((data, i) => {
-        //let ingredients = data.ingredients.filter()
         return (
           <h5 obj={data} key={i}>
             <a href={data.url} target="_blank" rel="noopener noreferrer">
               {JSON.stringify(data.name)}
             </a>
-            <form
+            {/* <form
           method="get"
           action="http://www.amazon.com/s/"
           target="_blank"
@@ -88,7 +79,8 @@ class RecipeCenter extends React.Component {
           <button type="submit" name="url">
             Get Ingredients
           </button>
-        </form>
+        </form> */}
+          <Buy ingredients={data.ingredients}/>
           </h5>
         );
       });

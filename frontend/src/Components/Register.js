@@ -25,11 +25,12 @@ const isRegistered = false
           console.log(response);
           
           //this.setState({redirect: true})
-          
+          history.push("/login")
         }, (error) => {
+          history.push("/login")
           console.log(error);
         })
-        history.push("/recipe_center")
+       
         
         //end axios
     }
@@ -77,9 +78,16 @@ const isRegistered = false
               />
               <br />
               <br />
-             <input type="submit" id="registerButton" defaultValue="Register" onClick={handleClick} />
+             <input type="submit" id="loginButton" defaultValue="Register" onClick={handleClick} />
             </form>
+            <div className="no-account container">
+          <h2>have an account?</h2>{" "}
+          <a className="create" href="/">
+            login!
+          </a>
+        </div>
           </div>
+          
         </div>
       </div>
     );

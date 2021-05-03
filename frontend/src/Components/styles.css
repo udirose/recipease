@@ -313,7 +313,7 @@ h1{
 
 
 /*username field*/
-#lEmail {
+#email {
     width: 80%;
     margin-top: 10%;
     color: #1b1b1b;
@@ -328,7 +328,7 @@ h1{
 }
 
 /*password field*/
-#lPassword {
+#password {
     width: 80%;
     color: #1b1b1b;
     font-family: 'futura';

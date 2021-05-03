@@ -1,13 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-function Nav(props) {
-
-    return(
-
-
+class NavLogged extends React.Component {
+  render() {
+    return (
       <nav className="navbar navbar-expand-md fixed-top">
-       
         <Link to = "/" className = "navbar-brand">
           <img
             className="logo"
@@ -15,9 +12,7 @@ function Nav(props) {
             width={252}
             length={36}
           />
-          </Link>
-        
-        
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -35,38 +30,37 @@ function Nav(props) {
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav mr-auto nav">
             <li className="nav-item">
-            <Link to = "/" className = "nav-link home">
-              
+          
+              <Link to = "/" className = "nav-link home">
                 HOME
+                </Link>
               
-              </Link>
             </li>
             <li className="nav-item">
-
+   
               <Link to = "/recipe_center" className = "nav-link recipe-center">
                 RECIPE CENTER
                 </Link>
               
             </li>
             <li className="nav-item">
-            <Link to = "/login" className = "nav-link login">
-              
-                LOGIN
-                </Link>
-              
+            <Link to = "/your_recipes" className = "nav-link saved-recipes">
+                YOUR RECIPES
+             </Link>
             </li>
             <li className="nav-item">
-
-              <Link to = "/register" className = "nav-link register">
-                REGISTER
-                </Link>
-
+            <a href = "/" className = "nav-link login">
+              
+                LOGOUT
+                
+                </a>
+              
             </li>
           </ul>
         </div>
       </nav>
     );
   }
-//}
+}
 
-export default Nav;
+export default NavLogged;

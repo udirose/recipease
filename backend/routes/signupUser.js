@@ -1,21 +1,29 @@
 const express = require('express')
 const router = express.Router()
+const bcrypt = require ('bcrypt')
 const registerUser = require('../models/signupmodel')
 
 
-router.route('/register').post((req,res)=>{
+router.route('/register').post( async(req,res)=>{
     const nuName = req.body.name
     const nuEmail = req.body.email
-    const nuPass = req.body.password
-    console.log(req.body.name)
+    //const nuPass = req.body.password
 
-    const newUser = new registerUser({
-        "name": nuName,
-        "email": nuEmail,
-        "password": nuPass
-    })
+    try {
+        const hashedPassword = await bcrypt.hash(req.body.password, 10)
 
-    newUser.save()
+        const newUser = new registerUser({
+            "name": nuName,
+            "email": nuEmail,
+            "password": hashedPassword
+        })
+        res.redirect('/login')
+        newUser.save()
+    } catch {
+        res.redirect('/register')
+    }
+
+    
 })
 
 module.exports = router

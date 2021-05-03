@@ -12,12 +12,14 @@ const submitRecip = require('../models/recipesmodel')
     const reName = req.body.name
     const reIngred = req.body.ingredients
     const reDesc = req.body.description
+    const userUrl = req.body.username
 
 
     const newRec = new submitRecip({
         "name": reName,
         "ingredients": reIngred,
-        "description": reDesc
+        "description": reDesc,
+        "url": userUrl
     })
 
     newRec.save()
